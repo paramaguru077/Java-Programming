@@ -1,4 +1,4 @@
-package Oops;
+package Oops.Abstraction;
 
 public class Abstraction {
     public static void main(String[] args) {

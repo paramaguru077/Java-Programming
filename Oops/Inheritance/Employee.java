@@ -8,7 +8,7 @@ public class Employee {
      // m1.Display();
      // Employee1 e1 = new Manager("siva",50000,3000,"09/50/2000");
 
-      Employee1[] employees = new Employee1[3];
+   /*   Employee1[] employees = new Employee1[3];
      employees[0] = new Employee1();
      employees[1]= new Manager("guru",2000,80000,"7/03/2004");
      employees[2]= new Employee1();
@@ -21,13 +21,16 @@ public class Employee {
     for(Employee1 e:employees){
         e.Display(); // data binding
     } 
-
+  */
+  Manager m2= new Manager("guru", 2, 3, "parama");
+  m2.setBonus(90);
+  Object b = m2.getObject();
 }
 }
 
 class Employee1{  // base class
    private  String name ;
-  private double salary;
+  protected double salary;
   private String dateOfJoining;
   Employee1(String n,double s,String d){
         this.name=n;
@@ -63,6 +66,7 @@ class Employee1{  // base class
 
 class Manager extends Employee1{  //derived class
     double bonus;
+    
     Manager(String n,double s,double b, String d){
         super(n,s,d);  // it call the parent class constructor
         bonus=b;
@@ -70,6 +74,7 @@ class Manager extends Employee1{  //derived class
 
    public void setBonus(double b){
         bonus=b;
+        System.out.println(super.salary);
     }
 
     public double getSalary(){
@@ -79,6 +84,7 @@ class Manager extends Employee1{  //derived class
         super.Display();
         System.out.println(bonus);
     }
+
 
 
  
